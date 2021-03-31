@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Orders from './Components/Orders/Orders';
 import Admin from './Components/Admin/Admin';
@@ -13,52 +14,32 @@ import Login from './Components/Login/Login';
 
 function App() {
   return (
+    <div>
+    <Header></Header>
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">Orders</Link>
-            </li>
-            <li>
-              <Link to="/admin">Admin</Link>
-            </li>
-            <li>
-              <Link to="/users">Deals</Link>
-            </li>
-            <li>
-              <Link to="/users">Login</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
+    <Switch>
+    <Route path="/home">
             <Home />
-          </Route>
-          <Route path="/users">
-            <Orders />
           </Route>
           <Route path="/admin">
             <Admin />
           </Route>
-          <Route path="/users">
+          <Route path="/orders">
+            <Orders />
+          </Route>
+          <Route path="/checkout">
             <Checkout />
           </Route>
-          <Route path="/users">
+          <Route path="/login">
             <Login />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
-      </div>
     </Router>
+    </div>
+    
   );
 }
 

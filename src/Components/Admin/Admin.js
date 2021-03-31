@@ -10,6 +10,7 @@ const Admin = () => {
         const productData = {
             name: data.name,
             author: data.author,
+            price: data.price,
             productUrl: productUrl
         }
         console.log(productData);
@@ -42,6 +43,8 @@ const Admin = () => {
                 <input name="name" placeholder="Enter Book Name" ref={register} />
                 <br/>
                 <input author="author" placeholder="Enter Author Name" ref={register} />
+                <br/>
+                <input price="price" placeholder="Enter Price" ref={register} />
                 <br/>
                 <input name="exampleRequired" type="file" onChange={handleImageChange} />
                 <input type="submit" />

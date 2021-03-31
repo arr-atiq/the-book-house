@@ -1,0 +1,25 @@
+.header{
+    background-color: black;
+    line-height: 60px;
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.header .brand-name h2{
+    margin-top:10px;
+    color:white;
+}
+.header .li-items{
+    display: flex;
+}
+.header li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    padding: 5px;
+}
+nav a:hover{
+    background-color: gray;
+}
