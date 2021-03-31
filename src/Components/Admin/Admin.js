@@ -1,10 +1,25 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 const Admin = () => {
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const [productUrl, setProductUrl] = useState(null);
+    const onSubmit = data => {
+        const productData = {
+            name: data.name,
+            productUrl: productUrl
+        }
+        console.log(productData);
+        const url = `http://localhost:5000/addProduct`;
+        fetch(url ,{
+            method: 'POST',
+            headers: {'content-Type': 'application/json'},
+            body: JSON.stringify(productData)
+        })
+        .then(res => console.log("server side response", res))
+    };
     
     const handleImageChange = event =>{
         const imageData = new FormData();
@@ -13,7 +28,7 @@ const Admin = () => {
 
         axios.post('https://api.imgbb.com/1/upload', imageData)
         .then(function(response){
-            console.log(response.data.data.display_url);
+            setProductUrl(response.data.data.display_url);
         })
         .catch(function(error){
             console.log(error);
@@ -23,7 +38,10 @@ const Admin = () => {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 
-                <input name="example" defaultValue="test" ref={register} />
+                <input name="name" placeholder="Enter Book Name" ref={register} />
+                <br/>
+                <input author="author" placeholder="Enter Author Name" ref={register} />
+                <br/>
                 <input name="exampleRequired" type="file" onChange={handleImageChange} />
                 <input type="submit" />
                 
