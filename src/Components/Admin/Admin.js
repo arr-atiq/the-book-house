@@ -13,7 +13,7 @@ const Admin = () => {
             price: data.price,
             productUrl: productUrl
         }
-        console.log(productData);
+        
         const url = `http://localhost:5000/addProduct`;
         fetch(url ,{
             method: 'POST',
