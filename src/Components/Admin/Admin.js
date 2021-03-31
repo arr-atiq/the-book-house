@@ -9,6 +9,7 @@ const Admin = () => {
     const onSubmit = data => {
         const productData = {
             name: data.name,
+            author: data.author,
             productUrl: productUrl
         }
         console.log(productData);
