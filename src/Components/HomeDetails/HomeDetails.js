@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 
 const HomeDetails = (props) => {
     const { name, productUrl, author, price } = props.product;
-    console.log(productUrl);
     return (
         <div className="main-products">
             <div className=".single-product">
