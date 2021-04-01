@@ -1,33 +1,14 @@
-.login-section{
-    width: 500px;
-    height:400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.login-page{
     text-align: center;
-    margin-left: 30%;
 }
-.login-section .sign-in{
+.login-page .gbtn{
     width: 250px;
-    padding: 20px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.login-page .gbtn:hover{
     background-color: black;
-    border: none;
-    outline: none;
-    font-size:  20px;
-    border-radius: 10px;
     color: white;
-    margin-top: 100px;
-}
-.login-section .sign-out{
-    width: 150px;
-    padding: 10px;
-    background-color: green;
-    border: none;
-    outline: none;
-    font-size:  20px;
-    border-radius: 10px;
-    color: white;
-    margin-top: 20px;
-}
-.user-info p{
-    font-size: 25px;
-    margin-top:20px;
 }

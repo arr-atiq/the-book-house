@@ -17,6 +17,6 @@ const HomeDetails = (props) => {
             </div>
         </div>
     );
-};
+}
 
 export default HomeDetails;

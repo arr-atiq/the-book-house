@@ -19,7 +19,6 @@ const Header = (props) => {
                 <li><a href="/checkout">Checkout</a></li>
                 <li><a href="/login">Login</a></li>
             </div>
-            {/* <button onCack={() => setLoggedInUser({})}>Sign out</button> */}
         </nav>
     );
 };
