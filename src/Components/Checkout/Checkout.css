@@ -1,0 +1,19 @@
+.checkout-info{
+    width: 600px;
+    height:300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+}
+.checkout-info img {
+    width: 200px;
+    height:250px;
+}
+.checkout-info .product-details p{
+    font-size:20px;
+    font-weight:bold;
+    line-height:15px;
+}

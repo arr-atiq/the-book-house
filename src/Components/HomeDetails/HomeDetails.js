@@ -1,9 +1,16 @@
 import React from 'react';
 import './HomeDetails.css';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
 const HomeDetails = (props) => {
-    const { name, productUrl, author, price } = props.product;
+    const { name, productUrl, author, price, _id } = props.product;
+
+    const history = useHistory();
+    const handleClick = productId => {
+        history.push(`/checkout/${productId}`);
+    }
+
     return (
         <div className="main-products">
             <div className=".single-product">
@@ -13,7 +20,7 @@ const HomeDetails = (props) => {
             </div>
             <div className="btn-area">
                 <h4>${price}</h4>
-                <Button className="buy-now" variant="primary">Buy Now</Button>{' '}
+                <Button onClick={()=>handleClick(_id)} className="buy-now" variant="primary">Buy Now</Button>{' '}
             </div>
         </div>
     );

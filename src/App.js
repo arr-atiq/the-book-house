@@ -33,7 +33,7 @@ function App() {
           <Route path="/orders">
             <Orders />
           </Route>
-          <Route path="/checkout">
+          <Route path="/checkout/:productId">
             <Checkout />
           </Route>
           <Route path="/login">
@@ -43,7 +43,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </Router> */}
+      </Router>
     </UserContext.Provider>
 
 
