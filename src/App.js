@@ -34,9 +34,9 @@ function App() {
           <Route path="/orders">
             <Orders />
           </Route>
-          <Route path="/checkout/:productId">
+          <PrivateRoute path="/checkout/:productId">
             <Checkout />
-          </Route>
+          </PrivateRoute>
           <Route path="/shipment/:productId">
             <Shipment />
           </Route>

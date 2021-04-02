@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './Admin.css';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
@@ -41,18 +42,13 @@ const Admin = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="admin-form" onSubmit={handleSubmit(onSubmit)}>
                 
                 <input name="name" placeholder="Enter Book Name" ref={register} />
-                <br/>
                 <input name="author" placeholder="Enter Author Name" ref={register} />
-                <br/>
                 <input name="price" type="number" placeholder="Enter Price" ref={register} />
-                <br/>
                 <input name="ShippingCost" type="number" placeholder="Enter Shipping Cost" ref={register} />
-                <br/>
                 <input name="vat" type="number" placeholder="Enter Vat" ref={register} />
-                <br/>
                 <input name="exampleRequired" type="file" onChange={handleImageChange} />
                 <input type="submit" />
                 

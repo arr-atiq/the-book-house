@@ -1,0 +1,15 @@
+.admin-form{
+    margin:0 auto;
+    width: 500px;
+    height:450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.admin-form input {
+    display: block;
+    margin-top: 30px;
+    margin-left: 20%;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
