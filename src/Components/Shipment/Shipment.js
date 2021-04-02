@@ -34,7 +34,7 @@ const Shipment = () => {
             body: JSON.stringify(allPlaceNewOrder)
         })
             .then(res => {
-                console.log("server side response");
+                alert("Order Place Successful!");
             })
     }
 
