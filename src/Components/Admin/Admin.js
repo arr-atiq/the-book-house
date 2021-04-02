@@ -11,9 +11,10 @@ const Admin = () => {
             name: data.name,
             author: data.author,
             price: data.price,
+            ShippingCost: data.ShippingCost,
+            vat: data.vat,
             productUrl: productUrl
         }
-        console.log(productData.price);
         const url = `http://localhost:5000/addProduct`;
         fetch(url ,{
             method: 'POST',
@@ -45,6 +46,10 @@ const Admin = () => {
                 <input name="author" placeholder="Enter Author Name" ref={register} />
                 <br/>
                 <input name="price" type="number" placeholder="Enter Price" ref={register} />
+                <br/>
+                <input name="ShippingCost" type="number" placeholder="Enter Shipping Cost" ref={register} />
+                <br/>
+                <input name="vat" type="number" placeholder="Enter Vat" ref={register} />
                 <br/>
                 <input name="exampleRequired" type="file" onChange={handleImageChange} />
                 <input type="submit" />

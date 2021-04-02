@@ -13,6 +13,7 @@ import Admin from './Components/Admin/Admin';
 import Checkout from './Components/Checkout/Checkout';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Shipment from './Components/Shipment/Shipment';
 
 export const UserContext = createContext();
 
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/checkout/:productId">
             <Checkout />
+          </Route>
+          <Route path="/shipment/:productId">
+            <Shipment />
           </Route>
           <Route path="/login">
             <Login />

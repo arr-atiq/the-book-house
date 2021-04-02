@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import HomeDetails from '../HomeDetails/HomeDetails';
 import './Home.css';
 
@@ -14,7 +15,7 @@ const Home = () => {
         <div className="container">
             <div className="all-products">
                 {
-                    products.map(pd => <HomeDetails product={pd}></HomeDetails>)
+                    products.map(pd => <HomeDetails id={pd.id} product={pd}></HomeDetails>)
                 }
             </div>
         </div>
