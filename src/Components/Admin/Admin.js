@@ -16,7 +16,7 @@ const Admin = () => {
             vat: data.vat,
             productUrl: productUrl
         }
-        const url = `http://localhost:5000/addProduct`;
+        const url = `https://frozen-island-42030.herokuapp.com/addProduct`;
         fetch(url ,{
             method: 'POST',
             headers: {'content-Type': 'application/json'},

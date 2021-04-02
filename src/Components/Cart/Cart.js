@@ -17,7 +17,7 @@
 //             // orderPro: orderPro
             
 //         }
-//         const url = 'http://localhost:5000/orderPlace';
+//         const url = 'https://frozen-island-42030.herokuapp.com/orderPlace';
 //         fetch(url, {
 //             method: 'POST',
 //             headers: { 'Content-Type' : 'application/json'},

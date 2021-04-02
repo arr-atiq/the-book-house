@@ -5,7 +5,7 @@ const Orders = () => {
 
     const [order, setOrder] = useState([])
     useEffect(() => {
-        const url = 'http://localhost:5000/allPlaceOrders';
+        const url = 'https://frozen-island-42030.herokuapp.com/allPlaceOrders';
         fetch(url)
         .then(res => res.json())
         .then(data => setOrder(data))

@@ -8,7 +8,7 @@ const Checkout = () => {
     const [checkProduct, setCheckProduct] = useState({});
     
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`;
+        const url = `https://frozen-island-42030.herokuapp.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data =>

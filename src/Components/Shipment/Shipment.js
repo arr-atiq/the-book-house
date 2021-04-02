@@ -13,7 +13,7 @@ const Shipment = () => {
     console.log(orderProduct);
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`
+        const url = `https://frozen-island-42030.herokuapp.com/product/${productId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setOrderProduct(data));
@@ -22,7 +22,7 @@ const Shipment = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const onSubmit = (data) => {
         const allPlaceNewOrder = {...loggedInUser, orderProduct, shipment: data, orderTime: new Date()}
-        const url = 'http://localhost:5000/orderPlace';
+        const url = 'https://frozen-island-42030.herokuapp.com/orderPlace';
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

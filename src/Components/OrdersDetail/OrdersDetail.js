@@ -7,7 +7,7 @@ const OrdersDetail = (props) => {
     const { orderTime, _id } = props.order;
 
     const deleteUser = (event, id) => {
-        // fetch(`http://localhost:5000//orderDelete/${id}`,{
+        // fetch(`https://frozen-island-42030.herokuapp.com/orderDelete/${id}`,{
         //     method: 'DELETE'
         // })
         // .then(res => res.json())
