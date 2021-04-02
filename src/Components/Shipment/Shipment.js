@@ -21,13 +21,6 @@ const Shipment = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const onSubmit = (data) => {
-        console.log("form submitted", data);
-        // const newOrderPlace = [...loggedInUser, ...orderProduct]
-        // const orderNewProduct = { 
-        //     address: data.address,
-        //     phone: data.phone,
-        //     orderProduct: orderProduct
-        // }
         const allPlaceNewOrder = {...loggedInUser, orderProduct, shipment: data, orderTime: new Date()}
         const url = 'http://localhost:5000/orderPlace';
         fetch(url, {

@@ -14,6 +14,7 @@ import Checkout from './Components/Checkout/Checkout';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Shipment from './Components/Shipment/Shipment';
+import NoMatch from './Components/NoMatch/NoMatch';
 
 export const UserContext = createContext();
 
@@ -31,20 +32,26 @@ function App() {
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>
-          <Route path="/orders">
+          <PrivateRoute path="/orders">
             <Orders />
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/checkout/:productId">
             <Checkout />
           </PrivateRoute>
           <Route path="/shipment/:productId">
             <Shipment />
           </Route>
+          <Route exact path="/about">
+            <Home />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="*">
+            <NoMatch></NoMatch>
           </Route>
         </Switch>
       </Router>

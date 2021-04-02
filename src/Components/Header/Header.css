@@ -23,3 +23,15 @@
 nav a:hover{
     background-color: gray;
 }
+
+@media screen and (max-width:600px){
+    .header{
+        justify-content: space-around;
+        display: block;
+    }
+    .header .brand-name h2{
+        margin-top:10px;
+        margin-left: 100px;
+        color:white;
+    }
+}
