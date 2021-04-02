@@ -21,7 +21,9 @@ const Admin = () => {
             headers: {'content-Type': 'application/json'},
             body: JSON.stringify(productData)
         })
-        .then(res => console.log("server side response", res))
+        .then(res => {
+            alert("Product added successfully")
+        })
     };
     
     const handleImageChange = event =>{
