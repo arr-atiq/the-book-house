@@ -1,4 +1,8 @@
+website live link : https://the-book-house-auth.web.app/
 
+client git repository: https://github.com/Porgramming-Hero-web-course/full-stack-client-arr-atiq
+
+server git repository: https://github.com/Porgramming-Hero-web-course/full-stack-server-arr-atiq
 
 Features of the book house website
 
